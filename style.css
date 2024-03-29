@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+
 }
 html,body{
     height: 100%;
@@ -102,10 +104,7 @@ nav .nav2{
     position: relative;
     z-index: 1;
 }
-.pg2{
-    height: 100vh;
-    width: 100%;
-}
+
 .pg1 .herosec{
     height:30vw;
     width: 45vw;
@@ -142,7 +141,7 @@ nav .nav2{
     filter: blur(20px);
     border-radius: 50%;
     position: absolute;
-    left: 50%;
+    left: 15%;
     animation-name: anime1;
     animation-duration: 4s;
     animation-timing-function: linear;
@@ -168,7 +167,123 @@ nav .nav2{
 
     }
     to{
-        transform: translate(30%,20%);
+        transform: translate(10%,10%);
+    }
+    
+}
+.pg2{
+    min-height: 100vh;
+    width: 100vw;
+    background-color:#EFEAE3;
+    padding: 3vw 0px;
+
+}
+.pg2 .marquee{
+    /* background-color: red; */
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.pg2 .marquee::-webkit-scrollbar{
+    display: none;
+
+}
+.marquee .movtext{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: scroll;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+
+}
+.marquee .movtext h4{
+    font-size: 8vw;
+    text-transform: uppercase;
+    display: inline-block;
+    /* margin-left: 10px; */
+    
+}
+.movtext .circle{
+    height:5vw ;
+    width: 5vw;
+    background-color: orangered;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0.4vw 2vw;
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+    
+}
+.pg2 .content{
+    /* background-color: aqua; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 3vw 0px;
+    height: 100vh;
+    width: 100vw;
+    margin-top: 5vw;
+    position: relative;
+}
+.content p{
+    width: 50%;
+    font-size: 4vw;
+    font-weight: 700;
+    line-height: 4vw;
+    /* text-justify: distribute-all-lines; */
+    position: relative;
+    z-index: 2;
+    
+}
+.content .con1{
+    /* height: 25vw; */
+    width: 20%;
+    /* background-color: bisque; */
+    padding: 2px;
+    align-self: center;
+    
+}
+.con1 img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 3vw;
+}
+.con1 p{
+    width: 100%;
+    font-size: 1vw;
+    line-height: 1.5vw;
+    font-weight: 500;
+}
+.movelem{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: orangered;
+    filter: blur(50px);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 55%;
+    left: 40%;
+    animation-name: movele;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: 0;
+}
+@keyframes movele {
+    from{
+        transform: translate(-50%,-50%);
+    }
+    to{
+        transform: translate(-80%,-40%) skew(10deg) scale(1.2);
     }
     
 }

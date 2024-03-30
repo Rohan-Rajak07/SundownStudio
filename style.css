@@ -1,6 +1,6 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: sans-serif;
 
@@ -262,28 +262,109 @@ nav .nav2{
     font-weight: 500;
 }
 .movelem{
-    height: 400px;
-    width: 400px;
+    height: 30vw;
+    width: 30vw;
     border-radius: 50%;
     background-color: orangered;
-    filter: blur(50px);
+    filter: blur(2vw);
     position: absolute;
     transform: translate(-50%,-50%);
     top: 55%;
     left: 40%;
     animation-name: movele;
     animation-duration: 3s;
-    animation-timing-function: linear;
+    animation-timing-function:linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     z-index: 0;
 }
 @keyframes movele {
     from{
-        transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%)skew(0);
     }
     to{
-        transform: translate(-80%,-40%) skew(10deg) scale(1.2);
+        transform: translate(-80%,-40%) skew(-10deg);
     }
     
+}
+
+.pg3{
+    /* min-height: 100vh; */
+    width: 100%;
+    background-color: #EFEAE3;
+    /* background-color: rebeccapurple; */
+    /* margin-bottom: 5vw; */
+}
+.elemsec .elem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw 0;
+    position: relative;
+    border-bottom: 1px solid rgba(158, 156, 156, 0.66);
+}
+.elemsec .elem::after{
+    background-color: orangered;
+    content: "";
+    height: 0%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    transition: all linear 0.2s;
+}
+.elemsec .elem:hover::after{
+    transition: all linear 0.2s;
+    height: 100%;
+
+}
+.elemsec .elem h3{
+    font-size: 3.2vw;
+    position: relative;
+    margin-left: 2vw;
+    z-index: 1;
+}
+.elem .right{
+    text-align: end;
+    margin-right: 2vw;
+    z-index: 1;
+
+}
+.right h4{
+    font-size: 1vw;
+    font-weight: 500;
+}
+.right p{
+    color: grey;
+    font-size: 1vw;
+    
+}
+.fiximg{
+    height: 32vw;
+    width: 24vw;
+    /* background-color:transparent; */
+    border-radius: 5%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 60%;
+    overflow: hidden;
+    display: none;
+    z-index:9 ;
+}
+.fiximg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.fiximg video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.pg4{
+    height: 100vh;
+    width: 100vw;
 }

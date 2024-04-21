@@ -6,8 +6,8 @@
 
 }
 html,body{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 body{
     overflow-x: hidden;
@@ -87,6 +87,7 @@ nav .nav2{
     width: 30%;
     font-weight: 600;
     font-family: sans-serif;
+    color: #000;
 }
 .centre>h1{
     font-size:10vw;
@@ -240,6 +241,8 @@ nav .nav2{
     /* text-justify: distribute-all-lines; */
     position: relative;
     z-index: 2;
+    color: #000;
+
     
 }
 .content .con1{
@@ -290,11 +293,37 @@ nav .nav2{
 
 .pg3{
     /* min-height: 100vh; */
-    width: 100%;
+    width: 100vw;
     background-color: #EFEAE3;
     /* background-color: rebeccapurple; */
     /* margin-bottom: 5vw; */
 }
+.fproj{
+    margin-left: 2vw;
+    align-items: center;
+    gap: 5px;
+    display: flex;
+    /* background-color: blue; */
+}
+.gool{
+    height: 8px;
+    width: 8px;
+    background-color: orangered;
+    border-radius: 50%;
+    align-items: center;
+}
+.fproj p{
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    padding: 2px;
+    color: #000;
+}
+.elemsec{
+    padding: 4vw 0px;
+    /* margin: 3vw 0px; */
+}
+
 .elemsec .elem{
     display: flex;
     justify-content: space-between;
@@ -302,6 +331,9 @@ nav .nav2{
     padding: 2vw 0;
     position: relative;
     border-bottom: 1px solid rgba(158, 156, 156, 0.66);
+    overflow: hidden;
+    
+
 }
 .elemsec .elem::after{
     background-color: orangered;
@@ -323,6 +355,7 @@ nav .nav2{
     position: relative;
     margin-left: 2vw;
     z-index: 1;
+
 }
 .elem .right{
     text-align: end;
@@ -364,7 +397,158 @@ nav .nav2{
     object-fit: cover;
     object-position: center;
 }
+.pg3{
+    padding: 50px 0px;
+    /* background-color: #000; */
+}
+.pg3 .design{
+    height: 100vh;
+    width: 96vw;
+    background-color: black;
+    border-radius: 20px;
+    margin: 0vw auto;
+    display: flex;
+    overflow: hidden;
+}
+.design .dleft{
+    height: 100%;
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: aqua; */
+}
+.design .dleft .p1{
+    font-size: 60px;
+    color: white;
+}
+.design .dleft p{
+    /* font-size: 60px; */
+    width: 56%;
+    line-height: 25px;
+    color: white;
+    /* background-color: red; */
+}
+.design .dright{
+    height: 100%;
+    width: 60%;
+    overflow: hidden;
+}
+.design .dright img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
 .pg4{
     height: 100vh;
     width: 100vw;
+    background-color: #EFEAE3;
+    padding: 20px;
+    margin-top: -1px;
+}
+.pg4 .workwith{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+}
+.workwith p{
+    color: #000;
+}
+.swiper {
+    margin-top: 4vw;
+    width: 100%;
+    height: 40%;
+    /* background-color: #fd0e0e; */
+
+}
+.swiper-slide {
+    height: 100%;
+    width: 35%;
+    padding: 10px 1.5vw;
+    font-size: 18px;
+    background-color: #EFEAE3;
+    border-left: 1px solid rgba(93, 91, 91, 0.845);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.swiper-slide img {
+    height: 70px;
+}
+.swiper-slide p {
+    color: #000;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+
+.pg5{
+    height: 114vh;
+    width: 100vw;
+    background-color: transparent;
+}
+footer .foot{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+
+
+}
+.foot h1{
+    font-size: 20vw;
+    color:white
+}
+.foot .social{
+    height: 6vw;
+    width: 95vw;
+    /* background-color: red; */
+    border-top: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social a,p{
+    font-size: 1vw;
+    color: white;
+    text-decoration-line:none;
+}
+.foot .move{
+    width: 100%;
+    height: 20%;
+    background-color: #fd0e0e;
+    filter: blur(2vw);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.move .c1{
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    background-color: #fd0e0e;
+    filter: blur(2vw);
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    animation-name: movele;
+    animation-duration: 3s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }

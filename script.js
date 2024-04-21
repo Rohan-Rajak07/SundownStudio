@@ -2,6 +2,12 @@ const scroll = new LocomotiveScroll({
     el: document.querySelector('#main'),
     smooth: true
 })
+
+gsap.from(".pg1 nav img",{
+    x:-200,
+    duration:1,
+
+})
 var leave=document.querySelector(".elemsec")
 leave.addEventListener("mouseleave",()=>{
     fix.style.display="none";
@@ -28,3 +34,13 @@ elem.forEach((e)=>{
         console.log(arr[get]);
     })
 })
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 60,
+    centeredSlides: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });

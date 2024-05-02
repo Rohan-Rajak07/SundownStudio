@@ -44,3 +44,11 @@ var swiper = new Swiper(".mySwiper", {
       clickable: true,
     },
   });
+
+
+var load=document.querySelector(".loader")
+setTimeout(() => {
+    // load.style.height=0;
+    load.style.top="-100%"
+
+  }, 3000);
